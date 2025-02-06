@@ -1,0 +1,17 @@
+/*  # -----------------------------------------------------------------
+    # Blurs
+    #
+    # Blurs (or background/ backdrop blurs) are often used stylistically in modern UI design. However, just
+    # like shadows, they allow you to add depth and realism to designs by positioning elements on a z-axis.
+    #
+    # Keep in mind that using blurs effects can be performance heavy, especially on safari. Use them wisely.
+    # ----------------------------------------------------------------- */
+@theme {
+    --blur: 0.8rem; /* 8px */
+    --blur-sm: 0.4rem; /* 4px */
+    --blur-md: 1.2rem; /* 12px */
+    --blur-lg: 1.6rem; /* 16px */
+    --blur-xl: 2.4rem; /* 24px */
+    --blur-2xl: 4rem; /* 40px */
+    --blur-3xl: 6.4rem; /* 64px */
+}

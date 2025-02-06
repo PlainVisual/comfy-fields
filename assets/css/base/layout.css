@@ -1,0 +1,4 @@
+
+body {
+  @apply min-h-dvh flex flex-col justify-center bg-background-brand-secondary;
+}

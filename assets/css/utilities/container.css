@@ -1,0 +1,28 @@
+@utility container-base {
+    --gutter: var(--spacing-6);
+    --gutter: clamp(var(--spacing-6), 6vw, var(--spacing-32));
+
+    @apply px-[var(--gutter)] mx-auto;
+}
+
+@utility container {
+    @apply max-w-[calc(var(--breakpoint-xl)+2*var(--gutter))] container-base;
+}
+@utility container-xs {
+    @apply max-w-[calc(var(--breakpoint-xs)+2*var(--gutter))] container-base;
+}
+@utility container-sm {
+    @apply max-w-[calc(var(--breakpoint-xs)+2*var(--gutter))] container-base;
+}
+@utility container-md {
+    @apply max-w-[calc(var(--breakpoint-sm)+2*var(--gutter))] container-base;
+}
+@utility container-lg {
+    @apply max-w-[calc(var(--breakpoint-md)+2*var(--gutter))] container-base;
+}
+@utility container-xl {
+    @apply max-w-[calc(var(--breakpoint-lg)+2*var(--gutter))] container-base;
+}
+@utility container-2xl {
+    @apply max-w-[calc(var(--breakpoint-xl)+2*var(--gutter))] container-base;
+}

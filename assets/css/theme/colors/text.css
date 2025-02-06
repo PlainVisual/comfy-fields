@@ -1,0 +1,31 @@
+/*  # -----------------------------------------------------------------
+    # Text color
+    #
+    # Use text color variables to manage all text fill colors in your designs across light
+    # and dark modes. For more detail on how these variables are structured and how to use
+    # them, please refer to our Introduction to variables.
+    # ----------------------------------------------------------------- */
+@theme inline {
+    --color-text-primary: var(--color-brand); /* Primary text such as page headings. */
+    --color-text-primary_on-brand: var(--color-white); /* Primary text when used on solid brand color backgrounds. Commonly used for brand theme website sections (e.g. CTA sections). */
+    --color-text-secondary: var(--color-brand_alt-300); /* Secondary text such as labels and section headings. */
+    --color-text-secondary_on-brand: var(--color-white); /* Secondary text when used on solid brand color backgrounds. Commonly used for brand theme website sections (e.g. CTA sections). */
+    --color-text-tertiary: var(--color-neutral-800); /* Tertiary text for such as supporting text and paragraph text. */
+    --color-text-tertiary_on-brand: var(--color-white); /* Tertiary text when used on solid brand color backgrounds. Commonly used for brand theme website sections (e.g. CTA sections). */
+    --color-text-quaternary: var(--color-neutral-500); /* quaternary text for more subtle and lower-contrast text, such as footer column headings. */
+    --color-text-quaternary_on-brand: var(--color-white); /* quaternary text when used on solid brand color backgrounds. Commonly used for brand theme website sections (e.g. footers). */
+
+    --color-text-white: var(--color-white); /* Text that is always white, regardless of the mode. */
+    --color-text-disabled: var(--color-neutral-500); /* Default color for disabled text such as disabled input fields or buttons. This can be changed to neutral-400deg but neutral-500 is higher contrast and more accessible. */
+    --color-text-placeholder: var(--color-neutral-400); /* Default color for placeholder text such as input field placeholders. This can be changed to neutral-400deg but neutral-500 is more accessible because it is higher contrast. */
+    --color-text-placeholder_subtle: var(--color-neutral-300); /* A more subtle (lower contrast) alternative placeholder text. Useful for components such as verification code input fields. */
+
+    --color-text-brand-primary: var(--color-brand-900); /* Primary brand text useful for headings (e.g. cards in pricing page headers). */
+    --color-text-brand-secondary: var(--color-brand-700); /* Secondary brand text for accented text, highlights, and subheadings (e.g. subheadings in blog post cards). */
+    --color-text-brand-tertiary: var(--color-brand-600); /* Tertiary brand text for lighter accented text and highlights (e.g. numbers in metric cards). */
+    --color-text-brand-tertiary_alt: var(--color-brand-600); /* An alternative to tertiary brand text that is lighter in dark mode (e.g. numbers in metric cards). */
+
+    --color-text-error-primary: var(--color-error-600); /* Default error state semantic text color (e.g. input field error states. */
+    --color-text-warning-primary: var(--color-warning-600); /* Default warning state semantic text color. */
+    --color-text-success-primary: var(--color-success-600); /* Default success state semantic text color. */
+}

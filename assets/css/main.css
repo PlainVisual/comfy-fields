@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+@import "./theme/index.css" layer(theme);
+@import "./base/index.css" layer(base);
+@import "./preflight/index.css" layer(base);
+@import "./components/index.css" layer(components);
+@import "./utilities/index.css";
+
+@plugin "@tailwindcss/typography";
+
+/* Dark mode */
+@variant dark (&:where([data-theme=dark]:not([data-theme=light]), [data-theme=dark] *:not([data-theme=light]),.dark:not([data-theme=light]), .dark *:not([data-theme=light])));
+
+/* Hover and focus */
+@variant hocus (&:hover, &:focus);

@@ -1,0 +1,34 @@
+/*  # -----------------------------------------------------------------
+    # Radii
+    #
+    # Use border radius values to quickly style the border-radius of an element. Border radius values are useful
+    # for rounding edges of images, buttons, or any other element. Just like pre-defined spacing values, working
+    # from a defined border radius system allows you to work faster and more consistently.
+    # ----------------------------------------------------------------- */
+@theme {
+    /*  # -----------------------------------------------------------------
+        # Radius
+        #
+        # Working from a pre-defined and limited radius system for adding border radiuses (or radii) to elements
+        # allows you to work faster and consistently. NOBEARS UI uses a pre-defined and limited radius system
+        # derived from the primitive spacing values.
+        # ----------------------------------------------------------------- */
+    --radius-none: 0; /* 0px */
+    --radius: 0.4rem; /* 4px - The default variable */
+    --radius-sm: 0.2rem; /* 2px */
+    --radius-md: 0.6rem; /* 6px */
+    --radius-lg: 0.8rem; /* 8px */
+    --radius-xl: 1.2rem; /* 12px */
+    --radius-2xl: 1.6rem; /* 16px */
+    --radius-3xl: 2.4rem; /* 24px */
+    --radius-4xl: 3.2rem; /* 32px */
+    --radius-full: 999.9rem; /* 9999px */
+
+    --radius-sm-inset: calc(var(--radius-sm) - 0.1rem); /* 1px */
+    --radius-md-inset: calc(var(--radius-md) - 0.1rem); /* 5px */
+    --radius-lg-inset: calc(var(--radius-lg) - 0.1rem); /* 7px */
+    --radius-xl-inset: calc(var(--radius-xl) - 0.1rem); /* 11px */
+    --radius-2xl-inset: calc(var(--radius-2xl) - 0.1rem); /* 15px */
+    --radius-3xl-inset: calc(var(--radius-3xl) - 0.1rem); /* 23px */
+    --radius-4xl-inset: calc(var(--radius-4xl) - 0.1rem); /* 31px */
+}

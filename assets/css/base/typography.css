@@ -1,0 +1,83 @@
+html {
+    /* Set the base font size to 10px (62.5% of 16px) */
+    font-size: 62.5%;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    font-family: var(--font-body), "Inter Tight";
+}
+
+h1 {
+    @apply text-display-xl text-text-primary;
+
+    @variant dark {
+        @apply text-text-primary_on-brand;
+    }
+}
+h2 {
+    @apply text-display-md text-text-primary;
+}
+h3 {
+    @apply text-display-sm text-text-primary;
+}
+h4 {
+    @apply text-display-xs text-text-primary;
+}
+h5 {
+    @apply text-xl text-text-secondary;
+}
+h6 {
+    @apply text-lg text-text-secondary;
+}
+
+p {
+    @apply text-base text-text-tertiary;
+
+    @variant dark {
+        @apply text-text-tertiary_on-brand;
+    }
+}
+a {
+    @apply text-text-secondary;
+}
+
+hr {
+}
+
+ul {
+}
+li {
+}
+ol {
+}
+dl {
+}
+dd {
+}
+dt {
+}
+
+blockquote {
+}
+
+/* body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    font-family: "Inter Tight";
+}
+
+h1 {
+    @apply text-display-xl text-foreground-primary;
+}
+
+h2 {
+    @apply text-display text-foreground-primary;
+}
+
+h3 {
+    @apply text-display-sm text-foreground-primary;
+} */

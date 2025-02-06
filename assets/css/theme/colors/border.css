@@ -1,0 +1,21 @@
+/*  # -----------------------------------------------------------------
+    # Border color
+    #
+    # Use border color variables to manage all border colors in your designs across light
+    # and dark modes. For more detail on how these variables are structured and how to
+    # use them, please refer to our Introduction to variables.
+    # ----------------------------------------------------------------- */
+@theme inline {
+    --color-border-primary: var(--color-neutral-300); /* High contrast borders. These are used for components such as input fields, button groups, and checkboxes. */
+    --color-border-secondary: var(--color-neutral-200); /* Medium contrast borders. This is the most commonly used border color and is the default for most components (such as file uploaders), cards (such as tables), and content dividers. */
+    --color-border-tertiary: var(--color-neutral-100); /* Low contrast borders useful for very subtle dividers and borders such as line and bar chart axis dividers. */
+
+    --color-border-disabled: var(--color-neutral-300); /* Default disabled border color for disabled states in components such as input fields and checkboxes. */
+    --color-border-disabled_subtle: var(--color-neutral-200); /* A more subtle (lower contrast) alternative for disabled borders such as disabled buttons. */
+
+    --color-border-brand: var(--color-brand-500); /* Default brand border color. Useful for active states in components such as such as input fields. */
+    --color-border-brand_alt: var(--color-brand_alt-500); /* An brand border color that switches to neutral when in dark mode. Useful for components such as brand-style variants of banners and footers. */
+
+    --color-border-error: var(--color-error-500); /* Default error state semantic border color. Useful for error states in components such as h as input fields and file uploaders. */
+    --color-border-error_subtle: var(--color-error-300); /* A more subtle (lower contrast) alternative for error state semantic borders such as error state input fields. */
+}

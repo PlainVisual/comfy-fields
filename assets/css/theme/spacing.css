@@ -1,0 +1,99 @@
+/*  # -----------------------------------------------------------------
+    # Spacing
+    #
+    # Just like your color scale, working from a defined spacing system allows you to work faster and more
+    # consistently. Consistent and scalable spacing helps you eliminate guesswork whilst designing and developing
+    # because you're designing with a limited set of options.
+    # ----------------------------------------------------------------- */
+@theme {
+    /*  # -----------------------------------------------------------------
+        # Spacing primitives
+        #
+        # By default, NOBEARS UI uses a numeric primitives spacing scale with proportional values where one spacing
+        # unit is equal to 0.25rem or 4px. As an example,  16px is twice as much spacing as 8, so they’re named 4
+        # and 2 respectively.
+        # ----------------------------------------------------------------- */
+    --spacing-px: 1px; /* 1px */
+    --spacing-0: 0rem; /* 0px */
+    --spacing-0_5: 0.2rem; /* 2px */
+    --spacing-1: 0.4rem; /* 4px */
+    --spacing-1_5: 0.6rem; /* 6px */
+    --spacing-2: 0.8rem; /* 8px */
+    --spacing-2_5: 1rem; /* 10px */
+    --spacing-3: 1.2rem; /* 12px */
+    --spacing-3_5: 1.4rem; /* 14px */
+    --spacing-4: 1.6rem; /* 16px */
+    --spacing-4_5: 1.8rem; /* 18px */
+    --spacing-5: 2rem; /* 20px */
+    --spacing-5_5: 2.2rem; /* 22px */
+    --spacing-6: 2.4rem; /* 24px */
+    --spacing-7: 2.8rem; /* 28px */
+    --spacing-8: 3.2rem; /* 32px */
+    --spacing-9: 3.6rem; /* 36px */
+    --spacing-10: 4rem; /* 40px */
+    --spacing-11: 4.4rem; /* 44px */
+    --spacing-12: 4.8rem; /* 48px */
+    --spacing-14: 5.6rem; /* 56px */
+    --spacing-15: 6rem; /* 60px */
+    --spacing-16: 6.4rem; /* 64px */
+    --spacing-18: 7.2rem; /* 72px */
+    --spacing-20: 8rem; /* 80px */
+    --spacing-24: 9.6rem; /* 96px */
+    --spacing-28: 11.2rem; /* 112px */
+    --spacing-30: 12rem; /* 120px */
+    --spacing-32: 12.8rem; /* 128px */
+    --spacing-36: 14.4rem; /* 144px */
+    --spacing-40: 16rem; /* 160px */
+    --spacing-44: 17.6rem; /* 176px */
+    --spacing-48: 19.2rem; /* 192px */
+    --spacing-52: 20.8rem; /* 208px */
+    --spacing-56: 22.4rem; /* 224px */
+    --spacing-60: 24rem; /* 240px */
+    --spacing-64: 25.6rem; /* 256px */
+    --spacing-72: 28.8rem; /* 288px */
+    --spacing-80: 32rem; /* 320px */
+    --spacing-96: 38.4rem; /* 384px */
+    /*  # -----------------------------------------------------------------
+        # Optional
+        #
+        # If you decide not to use these, you also need to remove their references in the following files:
+        # styles/
+        # `– theme/
+        #     `– _widths.scss
+        # ----------------------------------------------------------------- */
+    --spacing-120: 48rem; /* 480px */
+    --spacing-140: 56rem; /* 560px */
+    --spacing-160: 64rem; /* 640px */
+    --spacing-180: 72rem; /* 720px */
+    --spacing-192: 76.8rem; /* 768px */
+    --spacing-256: 102.4rem; /* 1024px */
+    --spacing-320: 128rem; /* 1280px */
+    --spacing-360: 144rem; /* 1440px */
+    --spacing-400: 160rem; /* 1600px */
+    --spacing-480: 192rem; /* 1920px */
+
+    /*  # -----------------------------------------------------------------
+        # Spacing scale
+        #
+        # Working from a pre-defined and limited spacing system allows you to work faster and consistently. These
+        # pre-defined spacing values are derived from the primitive spacing values and are useful for gaps, padding,
+        # and margin used across all of your components and designs.
+        # ----------------------------------------------------------------- */
+    --spacing-none: var(--spacing-0); /* 0px */
+    --spacing-xxs: var(--spacing-0_5); /* 2px */
+    --spacing-xs: var(--spacing-1); /* 4px */
+    --spacing-sm: var(--spacing-1_5); /* 6px */
+    --spacing-md: var(--spacing-2); /* 8px */
+    --spacing-lg: var(--spacing-3); /* 12px */
+    --spacing-xl: var(--spacing-4); /* 16px */
+    --spacing-2xl: var(--spacing-5); /* 20px */
+    --spacing-3xl: var(--spacing-6); /* 24px */
+    --spacing-4xl: var(--spacing-8); /* 32px */
+    --spacing-5xl: var(--spacing-10); /* 40px */
+    --spacing-6xl: var(--spacing-12); /* 48px */
+    --spacing-7xl: var(--spacing-16); /* 64px */
+    --spacing-8xl: var(--spacing-20); /* 80px */
+    --spacing-9xl: var(--spacing-24); /* 96px */
+    --spacing-10xl: var(--spacing-32); /* 128px */
+    --spacing-11xl: var(--spacing-40); /* 160px */
+}

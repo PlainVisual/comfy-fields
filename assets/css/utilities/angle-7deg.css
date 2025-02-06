@@ -1,0 +1,6 @@
+@utility angle-7deg {
+    mask:
+        url('data:image/svg+xml,<svg preserveAspectRatio="xMinYMid meet" width="1512" height="184" viewBox="0 0 1512 184" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1512 184H0L1512 0V184Z" fill="white"/></svg>') bottom/contain no-repeat,
+        linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+}

@@ -1,0 +1,22 @@
+@theme {
+    --*: initial;
+}
+
+/* Colors */
+@import "./colors/palette.css";
+@import "./colors/background.css";
+@import "./colors/border.css";
+@import "./colors/text.css";
+@import "./colors/foreground.css";
+
+@import "./3d-perspectives.css";
+@import "./animations.css";
+@import "./blurs.css";
+@import "./breakpoints.css";
+@import "./defaults.css";
+@import "./icons.css";
+@import "./radii.css";
+@import "./shadows.css";
+@import "./spacing.css";
+@import "./typography.css";
+@import "./widths.css";

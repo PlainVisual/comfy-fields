@@ -1,0 +1,39 @@
+/*  # -----------------------------------------------------------------
+    # Foreground color
+    #
+    # Use foreground color variables to manage all non-text foreground elements in your
+    # designs across light and dark modes. For more detail on how these variables are
+    # structured and how to use them, please refer to our Introduction to variables.
+    # ----------------------------------------------------------------- */
+@theme inline {
+    --color-foreground-primary: var(--color-neutral-900); /* Highest contrast non-text foreground elements such as icons. */
+    --color-foreground-secondary: var(--color-neutral-700); /* High contrast non-text foreground elements such as icons. */
+    --color-foreground-secondary_hover: var(--color-neutral-700); /* Secondary foreground elements when in hover state. */
+    --color-foreground-tertiary: var(--color-neutral-600); /* Medium contrast non-text foreground elements such as icons. */
+    --color-foreground-tertiary_hover: var(--color-neutral-700); /* Tertiary foreground elements when in hover state. */
+    --color-foreground-quaternary: var(--color-neutral-500); /* Medium-low contrast non-text foreground elements such as icons. */
+    --color-foreground-quaternary_hover: var(--color-neutral-700); /* quaternary foreground elements when in hover state. */
+    --color-foreground-quinary: var(--color-neutral-400); /* Low contrast non-text foreground elements such as icons. */
+    --color-foreground-quinary_hover: var(--color-neutral-700); /* Quinary foreground elements when in hover state, such as help icons. */
+    --color-foreground-senary: var(--color-neutral-300); /* Lowest contrast non-text foreground elements such as breadcrumb divider icons and vector map. Used very sparingly. */
+
+    --color-foreground-white: var(--color-white); /* Foreground elements that are always white, regardless of the mode. */
+    --color-foreground-disabled: var(--color-neutral-400); /* Default color for disabled non-text foreground elements such as icons in disabled button group buttons and input dropdown menu items. */
+    --color-foreground-disabled_subtle: var(--color-neutral-400); /* A more subtle (lower contrast) alternative for non-text disabled foreground elements such as disabled active checkboxes and tag checkboxes. */
+
+    --color-foreground-brand-primary: var(--color-brand-600); /* Primary brand color non-text foreground elements such as featured icons and progress bars. */
+    --color-foreground-brand-primary_alt: var(--color-brand-600); /* An alternative for primary brand color non-text foreground elements that switches to neutral when in dark mode such as active horizontal tabs. */
+    --color-foreground-brand-secondary: var(--color-brand-500); /* Secondary brand color non-text foreground elements such as accents and arrows in marketing site sections (e.g. hero header sections). */
+
+    --color-foreground-brand_alt-primary: var(--color-brand_alt-300); /* Primary brand color non-text foreground elements such as featured icons and progress bars. */
+    --color-foreground-brand_alt-secondary: var(--color-brand_alt-200); /* Secondary brand color non-text foreground elements such as accents and arrows in marketing site sections (e.g. hero header sections). */
+
+    --color-foreground-error-primary: var(--color-error-600); /* Primary error state color for non-text foreground elements such as featured icons. */
+    --color-foreground-error-secondary: var(--color-error-500); /* Secondary error state color for non-text foreground elements such as icons in error state input fields and negative metrics item charts and icons. */
+
+    --color-foreground-warning-primary: var(--color-warning-600); /* Primary warning state color for non-text foreground elements such as featured icons. */
+    --color-foreground-warning-secondary: var(--color-warning-500); /* Secondary warning state color for non-text foreground elements. */
+
+    --color-foreground-success-primary: var(--color-success-600); /* Primary success state color for non-text foreground elements such as featured icons. */
+    --color-foreground-success-secondary: var(--color-success-500); /* Secondary success state color for non-text foreground elements such as button dots, avatar online indicator dots, and negative metrics item charts and icons. */
+}

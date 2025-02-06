@@ -1,0 +1,31 @@
+[data-n-spacing-top="none"] {
+    padding-top: var(--spacing-0);
+}
+[data-n-spacing-bottom="none"] {
+    padding-bottom: var(--spacing-0);
+}
+[data-n-spacing-top="sm"] {
+    padding-top: var(--spacing-6);
+}
+[data-n-spacing-bottom="sm"] {
+    padding-bottom: var(--spacing-6);
+}
+[data-n-spacing-top="md"] {
+    padding-top: var(--spacing-10);
+}
+[data-n-spacing-bottom="md"] {
+    padding-bottom: var(--spacing-10);
+}
+[data-n-spacing-top="lg"] {
+    padding-top: var(--spacing-20);
+}
+[data-n-spacing-bottom="lg"] {
+    padding-bottom: var(--spacing-20);
+}
+
+[data-n-background="primary"] {
+    background-color: var(--color-background-primary);
+}
+[data-n-background="secondary"] {
+    background-color: var(--color-background-secondary);
+}

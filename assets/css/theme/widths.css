@@ -1,0 +1,22 @@
+/*  # -----------------------------------------------------------------
+    # Widths
+    #
+    # Working from a pre-defined and limited spacing system for wrapping content allows you to work faster and
+    # consistently. These pre-defined widths are derived from the primitive spacing values and are useful for
+    # defining max widths for sections such as text content and page headings.
+    # ----------------------------------------------------------------- */
+@theme inline {
+    --width-3xs: var(--spacing-72); /* 288px */
+    --width-2xs: var(--spacing-80); /* 320px */
+    --width-xs: var(--spacing-96); /* 384px */
+    --width-sm: var(--spacing-120); /* 480px */
+    --width-md: var(--spacing-140); /* 560px */
+    --width-lg: var(--spacing-160); /* 640px */
+    --width-xl: var(--spacing-192); /* 768px */
+    --width-2xl: var(--spacing-256); /* 1024px */
+    --width-3xl: var(--spacing-320); /* 1280px */
+    --width-4xl: var(--spacing-360); /* 1440px */
+    --width-5xl: var(--spacing-400); /* 1600px */
+    --width-6xl: var(--spacing-480); /* 1920px */
+    --width-prose: 65ch;
+}

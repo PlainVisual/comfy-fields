@@ -1,0 +1,8 @@
+.btn {
+  @apply cursor-pointer text-base px-4 py-2 rounded-lg font-medium transition-all duration-200 ease-[var(--transition-timing-function-in-out)] focus:outline-none focus:ring-2 focus:ring-offset-2;
+}
+
+.btn-primary {
+  @apply bg-brand text-white hover:bg-background-brand-solid.hover focus:ring-brand;
+}
+

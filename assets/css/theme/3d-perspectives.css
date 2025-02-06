@@ -1,0 +1,10 @@
+/*  # -----------------------------------------------------------------
+    # 3D Perspectives
+    # ----------------------------------------------------------------- */
+@theme {
+    --perspective-dramatic: 10rem; /* 100px */
+    --perspective-near: 30rem; /* 300px */
+    --perspective-normal: 50rem; /* 500px */
+    --perspective-midrange: 80rem; /* 800px */
+    --perspective-distant: 120rem; /* 1200px */
+}

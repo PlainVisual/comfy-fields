@@ -1,0 +1,22 @@
+/*  # -----------------------------------------------------------------
+    # Defaults
+    #
+    # This file contains the default values for the theme variables.
+    # ----------------------------------------------------------------- */
+@theme {
+    /*  # -----------------------------------------------------------------
+        # Transition
+        # ----------------------------------------------------------------- */
+    --default-transition-duration: 150ms;
+    --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    /*  # -----------------------------------------------------------------
+        # Typography
+        # ----------------------------------------------------------------- */
+    --default-font-family: var(--font-family-sans);
+    --default-font-feature-settings: var(--font-family-sans--font-feature-settings);
+    --default-font-variation-settings: var(--font-family-sans--font-variation-settings);
+    --default-mono-font-family: var(--font-family-mono);
+    --default-mono-font-feature-settings: var(--font-family-mono--font-feature-settings);
+    --default-mono-font-variation-settings: var(--font-family-mono--font-variation-settings);
+}
