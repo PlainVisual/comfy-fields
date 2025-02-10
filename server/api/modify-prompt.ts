@@ -40,6 +40,7 @@ function modifyWorkflow(variables: any) {
             topClothing = "unknown top",
             bottomClothing = "unknown bottom",
             topColor = "unknown top color",
+            topPattern = "unknown top pattern",
             bottomColor = "unknown bottom color",
             race = "unknown race",
             location = "unknown location",
@@ -47,7 +48,7 @@ function modifyWorkflow(variables: any) {
             cameraView = "unknown camera view",
         } = variables;
 
-        workflow["6"].inputs["text"] = `4K resolution, stunningly rendered, ${cameraView} view of an ${race} 40 years old ${gender} photo, with ${hairStyle} ${hairColor} hair, wearing a ${topColor} ${topClothing} and ${bottomColor} ${bottomClothing}, ${location} (${locationDescription}), cinematic lighting, intricate textures, sharp focus, perfect composition, professional photography`;
+        workflow["6"].inputs["text"] = `4K resolution, stunningly rendered, ${cameraView} view of an ${race} 40 years old ${gender} photo, with ${hairStyle} ${hairColor} hair, wearing a ${topColor} ${topClothing} with a ${topPattern} pattern and ${bottomColor} ${bottomClothing}, ${location} (${locationDescription}), cinematic lighting, intricate textures, sharp focus, perfect composition, professional photography`;
     } else {
         throw new Error("Invalid workflow structure");
     }

@@ -3,139 +3,76 @@
     <div class="comfy-fields basis-full lg:basis-2/6 flex flex-col justify-center">
       <h1 class="text-3xl font-black mb-2">Comfy fields</h1>
     <form class="flex flex-col gap-6" @submit.prevent="submitPrompt">
-      <div class="flex flex-col">
-        <label
-    <label for="gender"></label>
-    <select id="gender" v-model="formData.gender">
-      <option value="">Select Gender</option>
-      <option value="male">Male</option>
-      <option value="female">Female</option>
-      <option value="non-binary">Non-Binary</option>
-      <option value="other">Other</option>
-    </select>
-  </div>
-  <div class="flex flex-col">
-  <label for="hairstyle"></label>
-  <select id="hairstyle" v-model="formData.hairStyle">
-    <option value="">Select Hairstyle</option>
-    <option value="short">Short Hair</option>
-    <option value="long">Long Hair</option>
-    <option value="curly">Curly Hair</option>
-    <option value="straight">Straight Hair</option>
-    <option value="wavy">Wavy Hair</option>
-    <option value="buzz_cut">Buzz Cut</option>
-    <option value="bob_cut">Bob Cut</option>
-    <option value="ponytail">Ponytail</option>
-    <option value="braided">Braided Hair</option>
-    <option value="undercut">Undercut</option>
-  </select>
-</div>
-<div class="flex flex-col">
-    <label for="hairColor"></label>
-    <select id="hairColor" v-model="formData.hairColor">
-      <option value="">Select Hair Color</option>
-      <option value="blonde">Blonde</option>
-      <option value="brown">Brown</option>
-      <option value="black">Black</option>
-      <option value="red">Red</option>
-      <option value="gray">Gray</option>
-      <option value="other">Other</option>
-    </select>
-  </div>
-  <div class="flex flex-col">
-    <label for="race"></label>
-    <select id="race" v-model="formData.race">
-      <option value="">Select Race</option>
-      <option value="asian">Asian</option>
-      <option value="caucasian">Caucasian</option>
-      <option value="african">African</option>
-      <option value="latino">Latino</option>
-      <option value="middle eastern">Middle Eastern</option>
-      <option value="indigenous">Indigenous</option>
-      <option value="pacific islander">Pacific Islander</option>
-      <option value="mixed race">Mixed Race</option>
-      <option value="other">Other</option>
-    </select>
-  </div>
-  <div class="flex flex-col">
-    <label for="topClothing"></label>
-    <select id="topClothing" v-model="formData.topClothing">
-      <option value="">Select Top Clothing</option>
-      <option value="t-shirt">T-Shirt</option>
-      <option value="shirt">Shirt</option>
-      <option value="sweater">Sweater</option>
-      <option value="jacket">Jacket</option>
-      <option value="other">Other</option>
-    </select>
-  </div>
-  <div class="flex flex-col">
-    <label for="topColor"></label>
-    <select id="topColor" v-model="formData.topColor">
-      <option value="">Select Top Color</option>
-      <option value="red">Red</option>
-      <option value="blue">Blue</option>
-      <option value="green">Green</option>
-      <option value="black">Black</option>
-      <option value="white">White</option>
-      <option value="yellow">Yellow</option>
-      <option value="other">Other</option>
-    </select>
-  </div>
-  <div class="flex flex-col">
-    <label for="bottomClothing"></label>
-    <select id="bottomClothing" v-model="formData.bottomClothing">
-      <option value="">Select Bottom Clothing</option>
-      <option value="jeans">Jeans</option>
-      <option value="shorts">Shorts</option>
-      <option value="skirt">Skirt</option>
-      <option value="trousers">Trousers</option>
-      <option value="other">Other</option>
-    </select>
-  </div>
-  <div class="flex flex-col">
-    <label for="bottomColor"></label>
-    <select id="bottomColor" v-model="formData.bottomColor">
-      <option value="">Select Bottom Color</option>
-      <option value="red">Red</option>
-      <option value="blue">Blue</option>
-      <option value="green">Green</option>
-      <option value="black">Black</option>
-      <option value="white">White</option>
-      <option value="yellow">Yellow</option>
-      <option value="other">Other</option>
-    </select>
-  </div>
-  <div class="flex flex-col">
-    <label for="location"></label>
-    <select id="location" v-model="selectedLocation" @change="updateLocationDescription">
-      <option value="">Select Location</option>
-      <option value="Amsterdam, Netherlands">Amsterdam, Netherlands</option>
-      <option value="Tokyo, Japan">Tokyo, Japan</option>
-      <option value="Paris, France">Paris, France</option>
-      <option value="New York City, USA">New York City, USA</option>
-      <option value="Dubai, UAE">Dubai, UAE</option>
-      <option value="Rio de Janeiro, Brazil">Rio de Janeiro, Brazil</option>
-      <option value="Sydney, Australia">Sydney, Australia</option>
-      <option value="Cairo, Egypt">Cairo, Egypt</option>
-      <option value="London, UK">London, UK</option>
-    </select>
-  </div>
-  <div class="flex flex-col">
-    <label for="cameraView"></label>
-    <select id="cameraView" v-model="formData.cameraView">
-      <option value="">Select Camera View</option>
-      <option value="close-up">Close-up</option>
-      <option value="wide angle">Wide angle</option>
-      <option value="eye-level headshot">eye-level headshot</option>
-      <option value="over the shoulder">Over the shoulder</option>
-      <option value="low angle">Low angle</option>
-      <option value="high angle">High angle</option>
-      <option value="side view">Side view</option>
-      <option value="front view">Front view</option>
-    </select>
-  </div>
-  
+      <select-field 
+        label=""
+        :options="genderOptions"
+        v-model="formData.gender"
+        id="gender"      
+      />
+      <select-field 
+        label=""
+        :options="hairstyleOptions"
+        v-model="formData.hairStyle"
+        id="hairstyle"      
+      />
+      <select-field 
+        label=""
+        :options="haircolorOptions"
+        v-model="formData.hairColor"
+        id="haircolor"      
+      />
+      <select-field 
+        label=""
+        :options="raceOptions"
+        v-model="formData.race"
+        id="race"      
+      />
+      <select-field 
+        label=""
+        :options="topclothingOptions"
+        v-model="formData.topClothing"
+        id="topClothing"      
+      />
+      <select-field 
+        label=""
+        :options="topcolorOptions"
+        v-model="formData.topColor"
+        id="topColor"      
+      />
+      <select-field 
+        label=""
+        :options="patternOptions"
+        v-model="formData.topPattern"
+        id="topPattern"      
+      />
+      <select-field 
+        label=""
+        :options="bottomclothingOptions"
+        v-model="formData.bottomClothing"
+        id="bottomClothing"      
+      />
+      <select-field 
+        label=""
+        :options="bottomcolorOptions"
+        v-model="formData.bottomColor"
+        id="bottomColor"      
+      />
+      <select-field 
+        label=""
+        :options="locationOptions"
+        v-model="selectedLocation"
+        id="location"
+        @change="updateLocationDescription"
+      />
+      <select-field 
+        label=""
+        :options="cameraviewOptions"
+        v-model="formData.cameraView"
+        id="cameraView"      
+      />
+    
       <button class="btn btn-primary" type="submit">Generate Image</button>
+
     </form>
     </div>
     <div class="image-result p-6 relative min-h-[300px] md:min-h-[500px] basis-full lg:basis-4/6 bg-background-brand-primary rounded-lg">
@@ -158,15 +95,168 @@
 <script>
 
 export default {
+  
   data() {
     return {
-      formData: {
+
+genderOptions: [
+  { label: "Select Gender", value: "" },
+  { label: "Male", value: "male" },
+  { label: "Female", value: "female" },
+  { label: "Non-Binary", value: "non-binary" },
+  { label: "Other", value: "other" },
+],
+
+hairstyleOptions: [
+  { label: "Select Hairstyle", value: "" },
+  { label: "Short Hair", value: "short" },
+  { label: "Long Hair", value: "long" },
+  { label: "Curly Hair", value: "curly" },
+  { label: "Straight Hair", value: "straight" },
+  { label: "Wavy Hair", value: "wavy" },
+  { label: "Buzz Cut", value: "buzz_cut" },
+  { label: "Bob Cut", value: "bob_cut" },
+  { label: "Ponytail", value: "ponytail" },
+  { label: "Braided Hair", value: "braided" },
+  { label: "Undercut", value: "undercut" },
+],
+
+haircolorOptions: [
+  { label: "Select Hair Color", value: "" },
+  { label: "Blonde", value: "blonde" },
+  { label: "Brown", value: "brown" },
+  { label: "Black", value: "black" },
+  { label: "Red", value: "red" },
+  { label: "Gray", value: "gray" },
+  { label: "Other", value: "other" },
+],
+
+raceOptions: [
+  { label: "Select Race", value: "" },
+  { label: "Asian", value: "asian" },
+  { label: "Caucasian", value: "caucasian" },
+  { label: "African", value: "african" },
+  { label: "Latino", value: "latino" },
+  { label: "Hispanic", value: "hispanic" },
+  { label: "Afro-American", value: "afro-american" },
+  { label: "Indigenous", value: "indigenous" },
+  { label: "Mixed", value: "mixed" },
+  { label: "Native American", value: "native american" },
+  { label: "Pacific Islander", value: "pacific islander" },
+  { label: "Middle Eastern", value: "middle eastern" },
+  { label: "Other", value: "other" },
+],
+
+topclothingOptions: [
+  { label: "Select Top Clothing", value: "" },
+  { label: "T-Shirt", value: "t-shirt" },
+  { label: "Shirt", value: "shirt" },
+  { label: "Sweater", value: "sweater" },
+  { label: "Jacket", value: "jacket" },
+  { label: "Blouse", value: "blouse" },
+  { label: "Hoodie", value: "hoodie" },
+  { label: "Tank Top", value: "tank_top" },
+  { label: "Cardigan", value: "cardigan" },
+  { label: "Blazer", value: "blazer" },
+  { label: "Dress", value: "dress" },
+  { label: "Crop Top", value: "crop_top" },
+  { label: "Blouse", value: "blouse" },
+  { label: "Other", value: "other" },
+],
+
+topcolorOptions: [
+  { label: "Select Top Color", value: "" },
+  { label: "Red", value: "red" },
+  { label: "Blue", value: "blue" },
+  { label: "Green", value: "green" },
+  { label: "Black", value: "black" },
+  { label: "White", value: "white" },
+  { label: "Yellow", value: "yellow" },
+  { label: "Purple", value: "purple" },
+  { label: "Orange", value: "orange" },
+  { label: "Pink", value: "pink" },
+  { label: "Brown", value: "brown" },
+  { label: "Gray", value: "gray" },
+  { label: "Other", value: "other" },
+],
+
+patternOptions: [
+  { label: "Select Pattern", value: "" },
+  { label: "Striped", value: "striped" },
+  { label: "Polka Dots", value: "polka_dots" },
+  { label: "Plaid", value: "plaid" },
+  { label: "Floral", value: "floral" },
+  { label: "Geometric", value: "geometric" },
+  { label: "Animal Print", value: "animal_print" },
+  { label: "Abstract", value: "abstract" },
+  { label: "Solid", value: "solid" },
+],
+
+bottomclothingOptions: [
+  { label: "Select Bottom Clothing", value: "" },
+  { label: "Jeans", value: "jeans" },
+  { label: "Shorts", value: "shorts" },
+  { label: "Skirt", value: "skirt" },
+  { label: "Trousers", value: "trousers" },
+  { label: "Leggings", value: "leggings" },
+  { label: "Capris", value: "capris" },
+  { label: "Cargo Pants", value: "cargo_pants" },
+  { label: "Sweatpants", value: "sweatpants" },
+  { label: "Chinos", value: "chinos" },
+  { label: "Other", value: "other" },
+],
+
+bottomcolorOptions: [
+  { label: "Select Bottom Color", value: "" },
+  { label: "Red", value: "red" },
+  { label: "Blue", value: "blue" },
+  { label: "Green", value: "green" },
+  { label: "Black", value: "black" },
+  { label: "White", value: "white" },
+  { label: "Yellow", value: "yellow" },
+  { label: "Other", value: "other" },
+],
+
+locationOptions: [
+  { label: "Select Location", value: "" },
+  { label: "Amsterdam, Netherlands", value: "Amsterdam, Netherlands" },
+  { label: "Tokyo, Japan", value: "Tokyo, Japan" },
+  { label: "Paris, France", value: "Paris, France" },
+  { label: "New York City, USA", value: "New York City, USA" },
+  { label: "Dubai, UAE", value: "Dubai, UAE" },
+  { label: "Rio de Janeiro, Brazil", value: "Rio de Janeiro, Brazil" },
+  { label: "Sydney, Australia", value: "Sydney, Australia" },
+  { label: "Cairo, Egypt", value: "Cairo, Egypt" },
+  { label: "London, UK", value: "London, UK" },
+],
+
+cameraviewOptions: [
+  { label: "Select Camera View", value: "" },
+  { label: "Close-up", value: "close-up" },
+  { label: "Wide angle", value: "wide angle" },
+  { label: "Eye-level headshot", value: "eye-level headshot" },
+  { label: "Over the shoulder", value: "over the shoulder" },
+  { label: "Low angle", value: "low angle" },
+  { label: "High angle", value: "high angle" },
+  { label: "Side view", value: "side view" },
+  { label: "Front view", value: "front view" },
+  { label: "Three-quarter view", value: "three-quarter view" },
+  { label: "Bird's eye view", value: "birds eye view" },
+  { label: "Worm's eye view", value: "worms eye view" },
+  { label: "Dutch angle", value: "dutch angle" },
+  { label: "Overhead shot", value: "overhead shot" }
+],  
+
+
+
+formData: {
         gender: '',
         hairColor: '',
         hairStyle: '',
         topClothing: '',
         bottomClothing: '',
         topColor: '',
+        topPattern: '',
         bottomColor: '',
         race: '',
         location: '',
