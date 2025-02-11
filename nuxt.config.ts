@@ -13,6 +13,7 @@ export default defineNuxtConfig({
   },
   modules: [
     '@nuxt/fonts',
+    '@pinia/nuxt',
   ],
   fonts: {
     experimental: {
