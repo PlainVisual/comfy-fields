@@ -150,13 +150,7 @@ export default defineEventHandler(() => {
     { label: "Worm's eye view", value: "worms eye view" },
     { label: "Dutch angle", value: "dutch angle" },
     { label: "Overhead shot", value: "overhead shot" }
-  ],  
-  
-  
-  
-  
-  
-  
+  ],
   
 
 };
