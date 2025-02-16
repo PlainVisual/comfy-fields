@@ -46,9 +46,31 @@ function modifyWorkflow(variables: any) {
             location = "unknown location",
             locationDescription = "unknown location description",
             cameraView = "unknown camera view",
+            weights = {}, // Default value
         } = variables;
 
-        workflow["6"].inputs["text"] = `4K resolution, stunningly rendered, ${cameraView} view of an ${race} 40 years old ${gender} photo, with ${hairStyle} ${hairColor} hair, wearing a ${topColor} ${topClothing} with a ${topPattern} pattern and ${bottomColor} ${bottomClothing}, ${location} (${locationDescription}), cinematic lighting, intricate textures, sharp focus, perfect composition, professional photography`;
+        // Helper function to wrap a variable with the correct weight format
+        const wrapWithWeight = (variable: string, key: string) => {
+            const weightObj = weights[key] || { value: 0, adjustment: "more" };
+            const validWeight = isNaN(weightObj.value) ? 0 : weightObj.value;
+
+            const formattedWeight = validWeight.toFixed(2);
+
+            if (weightObj.value === 0 && weightObj.adjustment === "more") {
+                return variable; // No weight adjustment, return the variable as-is
+            }
+            
+            return weightObj.adjustment === "more"
+                ? `(${variable}:${formattedWeight})`
+                : `[${variable}:${formattedWeight}]`;
+        };
+
+        // Generate the prompt text
+        const promptText = `4K resolution, stunningly rendered, ${wrapWithWeight(cameraView, "cameraView")} view of an ${wrapWithWeight(race, "race")} 40 years old ${wrapWithWeight(gender, "gender")} photo, with ${wrapWithWeight(hairStyle, "hairStyle")} ${wrapWithWeight(hairColor, "hairColor")} hair, wearing a ${wrapWithWeight(topColor, "topColor")} ${wrapWithWeight(topClothing, "topClothing")} with a ${wrapWithWeight(topPattern, "topPattern")} pattern and ${wrapWithWeight(bottomColor, "bottomColor")} ${wrapWithWeight(bottomClothing, "bottomClothing")}, ${wrapWithWeight(location, "location")} (${locationDescription}), cinematic lighting, intricate textures, sharp focus, perfect composition, professional photography`;
+
+        console.log("Generated Prompt:", promptText);
+     
+        workflow["6"].inputs["text"] = promptText;
     } else {
         throw new Error("Invalid workflow structure");
     }

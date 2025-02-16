@@ -1,74 +1,85 @@
 <template>
   <div class="container-lg flex flex-col gap-8 lg:flex-row p-4 font-display h-full">
     <div class="comfy-fields basis-full lg:basis-2/6 flex flex-col justify-center">
-      <h1 class="text-3xl font-black mb-2">Comfy fields</h1>
+      <h1 class="text-3xl font-black mb-2 ">Comfy fields</h1>
     <form class="flex flex-col gap-6" @submit.prevent="submitPrompt">
       <select-field 
         label=""
         :options="genderOptions"
         v-model="formData.gender"
-        id="gender"      
+        @weightChange="updateWeight"
+        :id="'gender'"
       />
       <select-field 
         label=""
         :options="hairstyleOptions"
         v-model="formData.hairStyle"
-        id="hairstyle"      
+        @weightChange="updateWeight"
+        :id="'hairStyle'"      
       />
       <select-field 
         label=""
         :options="haircolorOptions"
         v-model="formData.hairColor"
-        id="haircolor"      
+        @weightChange="updateWeight"
+        :id="'hairColor'"      
       />
       <select-field 
         label=""
         :options="raceOptions"
         v-model="formData.race"
-        id="race"      
+        @weightChange="updateWeight"
+        :id="'race'"          
       />
       <select-field 
         label=""
         :options="topclothingOptions"
         v-model="formData.topClothing"
-        id="topClothing"      
+        @weightChange="updateWeight"
+        :id="'topClothing'"                       
       />
       <select-field 
         label=""
         :options="topcolorOptions"
         v-model="formData.topColor"
-        id="topColor"      
+        @weightChange="updateWeight"      
+        :id="'topColor'"      
       />
       <select-field 
         label=""
         :options="patternOptions"
         v-model="formData.topPattern"
-        id="topPattern"      
+        @weightChange="updateWeight"
+        :id="'topPattern'"      
       />
       <select-field 
         label=""
         :options="bottomclothingOptions"
         v-model="formData.bottomClothing"
-        id="bottomClothing"      
+        @weightChange="updateWeight"
+        :id="'bottomClothing'"      
       />
       <select-field 
         label=""
         :options="bottomcolorOptions"
         v-model="formData.bottomColor"
-        id="bottomColor"      
+        @weightChange="updateWeight"
+        :id="'bottomColor'"      
       />
       <select-field 
         label=""
         :options="locationOptions"
         v-model="selectedLocation"
-        id="location"
+        @weightChange="updateWeight"
+        :id="'location'"
         @change="updateLocationDescription"
       />
       <select-field 
         label=""
         :options="cameraviewOptions"
         v-model="formData.cameraView"
-        id="cameraView"      
+        @weightChange="updateWeight"
+        :id="'cameraView'"      
       />
     
       <button class="btn btn-primary" type="submit">Generate Image</button>
@@ -112,6 +123,19 @@ formData: {
         location: '',
         locationDescription: '',
         cameraView: '',
+        weights: {
+          gender: { value: 0, adjustment: 'more' },
+          hairStyle: { value: 0, adjustment: 'more' },
+          hairColor: { value: 0, adjustment: 'more' },
+          race: { value: 0, adjustment: 'more' },
+          topClothing: { value: 0, adjustment: 'more' },
+          bottomClothing: { value: 0, adjustment: 'more' },
+          topColor: { value: 0, adjustment: 'more' },
+          topPattern: { value: 0, adjustment: 'more' },
+          bottomColor: { value: 0, adjustment: 'more' },
+          location: { value: 0, adjustment: 'more' },
+          cameraView: { value: 0, adjustment: 'more' }
+  }
       },
       selectedLocation: '', // Tracks the location dropdown selection
       locationDescriptions: {
@@ -176,6 +200,16 @@ formData: {
       this.formData.locationDescription = this.locationDescriptions[this.selectedLocation] || '';
     },
 
+    updateWeight({ field, weight, adjustment }) {
+  if (!field) {
+    console.error("Invalid field in weightChange event:", field);
+    return;
+  }
+
+  this.formData.weights[field] = { value: weight, adjustment };
+  console.log('Updated weights:', this.formData.weights[field]);
+},
+
     async submitPrompt() {
       this.isLoading = true;
       this.progress = 0;
@@ -183,6 +217,8 @@ formData: {
       let progressInterval = null;
 
       try {
+
+        console.log('FormData before submitting:', this.formData);
          // Start a timer to simulate progress updates
          const progressInterval = setInterval(() => {
           if (this.progress < 90) {
