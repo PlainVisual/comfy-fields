@@ -114,11 +114,11 @@ formData: {
         gender: '',
         hairColor: '',
         hairStyle: '',
-        topClothing: '',
-        bottomClothing: '',
-        topColor: '',
+        topClothing: 't-shirt',
+        bottomClothing: 'jeans',
+        topColor: 'white',
         topPattern: '',
-        bottomColor: '',
+        bottomColor: 'white',
         race: '',
         location: '',
         locationDescription: '',
@@ -156,41 +156,43 @@ formData: {
     };
   },
   async mounted() {
-    await this.optionsStore.fetchOptions(); // Fetch options when the component mounts
+    if (!Object.keys(this.optionsStore.options).length) {
+    await this.optionsStore.fetchOptions();
+  }
   },
   computed: {
     genderOptions() {
-      return this.optionsStore.genderOptions;
+      return this.optionsStore.options.genderOptions || [];
     },
     hairstyleOptions() {
-      return this.optionsStore.hairstyleOptions;
+      return this.optionsStore.options.hairstyleOptions || [];
     },
     haircolorOptions() {
-      return this.optionsStore.haircolorOptions;
+      return this.optionsStore.options.haircolorOptions || [];
     },
     raceOptions() {
-      return this.optionsStore.raceOptions;
+      return this.optionsStore.options.raceOptions || [];
     },
     topclothingOptions() {
-      return this.optionsStore.topclothingOptions;
+      return this.optionsStore.options.topclothingOptions || [];
     },
     topcolorOptions() {
-      return this.optionsStore.topcolorOptions;
+      return this.optionsStore.options.topcolorOptions || [];
     },
     patternOptions() {
-      return this.optionsStore.patternOptions;
+      return this.optionsStore.options.patternOptions || [];
     },
     bottomclothingOptions() {
-      return this.optionsStore.bottomclothingOptions;
+      return this.optionsStore.options.bottomclothingOptions || [];
     },
     bottomcolorOptions() {
-      return this.optionsStore.bottomcolorOptions;
+      return this.optionsStore.options.bottomcolorOptions || [];
     },
     locationOptions() {
-      return this.optionsStore.locationOptions;
+      return this.optionsStore.options.locationOptions || [];
     },
     cameraviewOptions() {
-      return this.optionsStore.cameraviewOptions;
+      return this.optionsStore.options.cameraviewOptions || [];
     },
   },
   methods: {

@@ -66,7 +66,7 @@ function modifyWorkflow(variables: any) {
         };
 
         // Generate the prompt text
-        const promptText = `4K resolution, stunningly rendered, ${wrapWithWeight(cameraView, "cameraView")} view of an ${wrapWithWeight(race, "race")} 40 years old ${wrapWithWeight(gender, "gender")} photo, with ${wrapWithWeight(hairStyle, "hairStyle")} ${wrapWithWeight(hairColor, "hairColor")} hair, wearing a ${wrapWithWeight(topColor, "topColor")} ${wrapWithWeight(topClothing, "topClothing")} with a ${wrapWithWeight(topPattern, "topPattern")} pattern and ${wrapWithWeight(bottomColor, "bottomColor")} ${wrapWithWeight(bottomClothing, "bottomClothing")}, ${wrapWithWeight(location, "location")} (${locationDescription}), cinematic lighting, intricate textures, sharp focus, perfect composition, professional photography`;
+        const promptText = `4K resolution, stunningly rendered, ${wrapWithWeight(cameraView, "cameraView")} view of an ${wrapWithWeight(race, "race")} 40 years old ${wrapWithWeight(gender, "gender")} with ${wrapWithWeight(hairStyle, "hairStyle")} ${wrapWithWeight(hairColor, "hairColor")} hair, wearing a ${wrapWithWeight(topColor, "topColor")} ${wrapWithWeight(topClothing, "topClothing")} with a ${wrapWithWeight(topPattern, "topPattern")} pattern and ${wrapWithWeight(bottomColor, "bottomColor")} ${wrapWithWeight(bottomClothing, "bottomClothing")}, ${wrapWithWeight(location, "location")} (${locationDescription}), cinematic lighting, intricate textures, sharp focus, perfect composition, professional photography`;
 
         console.log("Generated Prompt:", promptText);
      
